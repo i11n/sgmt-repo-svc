@@ -167,6 +167,7 @@ export async function initRepoTask(
     'src/types',
     'tests',
     'tests/fixtures',
+    '.github/workflows',
   ];
 
   for (const folder of folders) {

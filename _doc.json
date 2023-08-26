@@ -1,173 +1,26 @@
 [
   {
-    "kind": "function",
-    "name": "initRepoTask",
+    "kind": "variable",
+    "name": "VERSION",
     "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/tasks/init_repo.task.ts",
-      "line": 71,
-      "col": 0
+      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/version.ts",
+      "line": 10,
+      "col": 13
     },
     "declarationKind": "export",
     "jsDoc": {
-      "doc": "Initializes a repo with the sgmt repo scaffold."
+      "doc": "The current release version of the partic11e repo-svc package."
     },
-    "functionDef": {
-      "params": [
-        {
-          "kind": "assign",
-          "left": {
-            "kind": "identifier",
-            "name": "testing",
-            "optional": false,
-            "tsType": null
-          },
-          "right": "[UNSUPPORTED]",
-          "tsType": null
-        },
-        {
-          "kind": "assign",
-          "left": {
-            "kind": "identifier",
-            "name": "logLevel",
-            "optional": false,
-            "tsType": null
-          },
-          "right": "[UNSUPPORTED]",
-          "tsType": null
-        }
-      ],
-      "returnType": {
-        "repr": "Promise",
-        "kind": "typeRef",
-        "typeRef": {
-          "typeParams": [
-            {
-              "repr": "void",
-              "kind": "keyword",
-              "keyword": "void"
-            }
-          ],
-          "typeName": "Promise"
+    "variableDef": {
+      "tsType": {
+        "repr": "0.0.0",
+        "kind": "literal",
+        "literal": {
+          "kind": "string",
+          "string": "0.0.0"
         }
       },
-      "hasBody": true,
-      "isAsync": true,
-      "isGenerator": false,
-      "typeParams": []
-    }
-  },
-  {
-    "kind": "function",
-    "name": "commitTask",
-    "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/tasks/commit.task.ts",
-      "line": 109,
-      "col": 0
-    },
-    "declarationKind": "export",
-    "jsDoc": {
-      "doc": "This function helps generate a commit message, optionally prompting the user to commit."
-    },
-    "functionDef": {
-      "params": [
-        {
-          "kind": "assign",
-          "left": {
-            "kind": "identifier",
-            "name": "testing",
-            "optional": false,
-            "tsType": null
-          },
-          "right": "[UNSUPPORTED]",
-          "tsType": null
-        },
-        {
-          "kind": "assign",
-          "left": {
-            "kind": "identifier",
-            "name": "logLevel",
-            "optional": false,
-            "tsType": null
-          },
-          "right": "[UNSUPPORTED]",
-          "tsType": null
-        }
-      ],
-      "returnType": {
-        "repr": "Promise",
-        "kind": "typeRef",
-        "typeRef": {
-          "typeParams": [
-            {
-              "repr": "void",
-              "kind": "keyword",
-              "keyword": "void"
-            }
-          ],
-          "typeName": "Promise"
-        }
-      },
-      "hasBody": true,
-      "isAsync": true,
-      "isGenerator": false,
-      "typeParams": []
-    }
-  },
-  {
-    "kind": "function",
-    "name": "bumpVersionTask",
-    "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/tasks/bump_version.task.ts",
-      "line": 41,
-      "col": 0
-    },
-    "declarationKind": "export",
-    "jsDoc": {
-      "doc": "This function bumps the version in the deno config file and version file."
-    },
-    "functionDef": {
-      "params": [
-        {
-          "kind": "assign",
-          "left": {
-            "kind": "identifier",
-            "name": "testing",
-            "optional": false,
-            "tsType": null
-          },
-          "right": "[UNSUPPORTED]",
-          "tsType": null
-        },
-        {
-          "kind": "assign",
-          "left": {
-            "kind": "identifier",
-            "name": "logLevel",
-            "optional": false,
-            "tsType": null
-          },
-          "right": "[UNSUPPORTED]",
-          "tsType": null
-        }
-      ],
-      "returnType": {
-        "repr": "Promise",
-        "kind": "typeRef",
-        "typeRef": {
-          "typeParams": [
-            {
-              "repr": "void",
-              "kind": "keyword",
-              "keyword": "void"
-            }
-          ],
-          "typeName": "Promise"
-        }
-      },
-      "hasBody": true,
-      "isAsync": true,
-      "isGenerator": false,
-      "typeParams": []
+      "kind": "const"
     }
   },
   {
@@ -759,6 +612,401 @@
           }
         }
       ]
+    }
+  },
+  {
+    "kind": "function",
+    "name": "commitTask",
+    "location": {
+      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/tasks/commit.task.ts",
+      "line": 109,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "This function helps generate a commit message, optionally prompting the user to commit."
+    },
+    "functionDef": {
+      "params": [
+        {
+          "kind": "assign",
+          "left": {
+            "kind": "identifier",
+            "name": "testing",
+            "optional": false,
+            "tsType": null
+          },
+          "right": "[UNSUPPORTED]",
+          "tsType": null
+        },
+        {
+          "kind": "assign",
+          "left": {
+            "kind": "identifier",
+            "name": "logLevel",
+            "optional": false,
+            "tsType": null
+          },
+          "right": "[UNSUPPORTED]",
+          "tsType": null
+        }
+      ],
+      "returnType": {
+        "repr": "Promise",
+        "kind": "typeRef",
+        "typeRef": {
+          "typeParams": [
+            {
+              "repr": "void",
+              "kind": "keyword",
+              "keyword": "void"
+            }
+          ],
+          "typeName": "Promise"
+        }
+      },
+      "hasBody": true,
+      "isAsync": true,
+      "isGenerator": false,
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "function",
+    "name": "bumpVersionTask",
+    "location": {
+      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/tasks/bump_version.task.ts",
+      "line": 41,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "This function bumps the version in the deno config file and version file."
+    },
+    "functionDef": {
+      "params": [
+        {
+          "kind": "assign",
+          "left": {
+            "kind": "identifier",
+            "name": "testing",
+            "optional": false,
+            "tsType": null
+          },
+          "right": "[UNSUPPORTED]",
+          "tsType": null
+        },
+        {
+          "kind": "assign",
+          "left": {
+            "kind": "identifier",
+            "name": "logLevel",
+            "optional": false,
+            "tsType": null
+          },
+          "right": "[UNSUPPORTED]",
+          "tsType": null
+        }
+      ],
+      "returnType": {
+        "repr": "Promise",
+        "kind": "typeRef",
+        "typeRef": {
+          "typeParams": [
+            {
+              "repr": "void",
+              "kind": "keyword",
+              "keyword": "void"
+            }
+          ],
+          "typeName": "Promise"
+        }
+      },
+      "hasBody": true,
+      "isAsync": true,
+      "isGenerator": false,
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "function",
+    "name": "initRepoTask",
+    "location": {
+      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/tasks/init_repo.task.ts",
+      "line": 71,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "Initializes a repo with the sgmt repo scaffold."
+    },
+    "functionDef": {
+      "params": [
+        {
+          "kind": "assign",
+          "left": {
+            "kind": "identifier",
+            "name": "testing",
+            "optional": false,
+            "tsType": null
+          },
+          "right": "[UNSUPPORTED]",
+          "tsType": null
+        },
+        {
+          "kind": "assign",
+          "left": {
+            "kind": "identifier",
+            "name": "logLevel",
+            "optional": false,
+            "tsType": null
+          },
+          "right": "[UNSUPPORTED]",
+          "tsType": null
+        }
+      ],
+      "returnType": {
+        "repr": "Promise",
+        "kind": "typeRef",
+        "typeRef": {
+          "typeParams": [
+            {
+              "repr": "void",
+              "kind": "keyword",
+              "keyword": "void"
+            }
+          ],
+          "typeName": "Promise"
+        }
+      },
+      "hasBody": true,
+      "isAsync": true,
+      "isGenerator": false,
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "function",
+    "name": "printAsciiBanner",
+    "location": {
+      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/print_ascii_banner.ts",
+      "line": 36,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "Prints a formatted partic11e banner with a tool `name`."
+    },
+    "functionDef": {
+      "params": [
+        {
+          "kind": "identifier",
+          "name": "name",
+          "optional": false,
+          "tsType": {
+            "repr": "string",
+            "kind": "keyword",
+            "keyword": "string"
+          }
+        }
+      ],
+      "returnType": {
+        "repr": "void",
+        "kind": "keyword",
+        "keyword": "void"
+      },
+      "hasBody": true,
+      "isAsync": false,
+      "isGenerator": false,
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "import",
+    "name": "colors",
+    "location": {
+      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/print_ascii_banner.ts",
+      "line": 7,
+      "col": 0
+    },
+    "declarationKind": "private",
+    "jsDoc": {
+      "doc": "This file exports the printAsciiBanner function.\n",
+      "tags": [
+        {
+          "kind": "unsupported",
+          "value": "@copyright 2022 integereleven. All rights reserved. MIT license."
+        }
+      ]
+    },
+    "importDef": {
+      "src": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/deps.ts",
+      "imported": "colors"
+    }
+  },
+  {
+    "kind": "function",
+    "name": "createTemplate",
+    "location": {
+      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/create_template.ts",
+      "line": 16,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "Create a template from a string template literal."
+    },
+    "functionDef": {
+      "params": [
+        {
+          "kind": "identifier",
+          "name": "strings",
+          "optional": false,
+          "tsType": {
+            "repr": "TemplateStringsArray",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "TemplateStringsArray"
+            }
+          }
+        },
+        {
+          "kind": "rest",
+          "arg": {
+            "kind": "identifier",
+            "name": "refs",
+            "optional": false,
+            "tsType": null
+          },
+          "tsType": {
+            "repr": "",
+            "kind": "array",
+            "array": {
+              "repr": "",
+              "kind": "parenthesized",
+              "parenthesized": {
+                "repr": "",
+                "kind": "union",
+                "union": [
+                  {
+                    "repr": "P",
+                    "kind": "typeRef",
+                    "typeRef": {
+                      "typeParams": null,
+                      "typeName": "P"
+                    }
+                  },
+                  {
+                    "repr": "TemplateCallback",
+                    "kind": "typeRef",
+                    "typeRef": {
+                      "typeParams": [
+                        {
+                          "repr": "T",
+                          "kind": "typeRef",
+                          "typeRef": {
+                            "typeParams": null,
+                            "typeName": "T"
+                          }
+                        }
+                      ],
+                      "typeName": "TemplateCallback"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "returnType": {
+        "repr": "TemplateCallback",
+        "kind": "typeRef",
+        "typeRef": {
+          "typeParams": [
+            {
+              "repr": "T",
+              "kind": "typeRef",
+              "typeRef": {
+                "typeParams": null,
+                "typeName": "T"
+              }
+            }
+          ],
+          "typeName": "TemplateCallback"
+        }
+      },
+      "hasBody": true,
+      "isAsync": false,
+      "isGenerator": false,
+      "typeParams": [
+        {
+          "name": "P",
+          "constraint": {
+            "repr": "string",
+            "kind": "keyword",
+            "keyword": "string"
+          }
+        },
+        {
+          "name": "T",
+          "constraint": {
+            "repr": "Props",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "Props"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "kind": "import",
+    "name": "Props",
+    "location": {
+      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/create_template.ts",
+      "line": 7,
+      "col": 0
+    },
+    "declarationKind": "private",
+    "jsDoc": {
+      "doc": "This file exports the createTemplate function.\n",
+      "tags": [
+        {
+          "kind": "unsupported",
+          "value": "@copyright 2022 integereleven. All rights reserved. MIT license."
+        }
+      ]
+    },
+    "importDef": {
+      "src": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/types/mod.ts",
+      "imported": "Props"
+    }
+  },
+  {
+    "kind": "import",
+    "name": "TemplateCallback",
+    "location": {
+      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/create_template.ts",
+      "line": 7,
+      "col": 0
+    },
+    "declarationKind": "private",
+    "jsDoc": {
+      "doc": "This file exports the createTemplate function.\n",
+      "tags": [
+        {
+          "kind": "unsupported",
+          "value": "@copyright 2022 integereleven. All rights reserved. MIT license."
+        }
+      ]
+    },
+    "importDef": {
+      "src": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/types/mod.ts",
+      "imported": "TemplateCallback"
     }
   },
   {
@@ -1434,6 +1682,42 @@
   },
   {
     "kind": "function",
+    "name": "createFilename",
+    "location": {
+      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/create_filename.ts",
+      "line": 19,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "Create a filename from a string, `name`."
+    },
+    "functionDef": {
+      "params": [
+        {
+          "kind": "identifier",
+          "name": "name",
+          "optional": false,
+          "tsType": {
+            "repr": "string",
+            "kind": "keyword",
+            "keyword": "string"
+          }
+        }
+      ],
+      "returnType": {
+        "repr": "string",
+        "kind": "keyword",
+        "keyword": "string"
+      },
+      "hasBody": true,
+      "isAsync": false,
+      "isGenerator": false,
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "function",
     "name": "parseArgs",
     "location": {
       "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/parse_args.ts",
@@ -1527,171 +1811,6 @@
   },
   {
     "kind": "function",
-    "name": "createTemplate",
-    "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/create_template.ts",
-      "line": 16,
-      "col": 0
-    },
-    "declarationKind": "export",
-    "jsDoc": {
-      "doc": "Create a template from a string template literal."
-    },
-    "functionDef": {
-      "params": [
-        {
-          "kind": "identifier",
-          "name": "strings",
-          "optional": false,
-          "tsType": {
-            "repr": "TemplateStringsArray",
-            "kind": "typeRef",
-            "typeRef": {
-              "typeParams": null,
-              "typeName": "TemplateStringsArray"
-            }
-          }
-        },
-        {
-          "kind": "rest",
-          "arg": {
-            "kind": "identifier",
-            "name": "refs",
-            "optional": false,
-            "tsType": null
-          },
-          "tsType": {
-            "repr": "",
-            "kind": "array",
-            "array": {
-              "repr": "",
-              "kind": "parenthesized",
-              "parenthesized": {
-                "repr": "",
-                "kind": "union",
-                "union": [
-                  {
-                    "repr": "P",
-                    "kind": "typeRef",
-                    "typeRef": {
-                      "typeParams": null,
-                      "typeName": "P"
-                    }
-                  },
-                  {
-                    "repr": "TemplateCallback",
-                    "kind": "typeRef",
-                    "typeRef": {
-                      "typeParams": [
-                        {
-                          "repr": "T",
-                          "kind": "typeRef",
-                          "typeRef": {
-                            "typeParams": null,
-                            "typeName": "T"
-                          }
-                        }
-                      ],
-                      "typeName": "TemplateCallback"
-                    }
-                  }
-                ]
-              }
-            }
-          }
-        }
-      ],
-      "returnType": {
-        "repr": "TemplateCallback",
-        "kind": "typeRef",
-        "typeRef": {
-          "typeParams": [
-            {
-              "repr": "T",
-              "kind": "typeRef",
-              "typeRef": {
-                "typeParams": null,
-                "typeName": "T"
-              }
-            }
-          ],
-          "typeName": "TemplateCallback"
-        }
-      },
-      "hasBody": true,
-      "isAsync": false,
-      "isGenerator": false,
-      "typeParams": [
-        {
-          "name": "P",
-          "constraint": {
-            "repr": "string",
-            "kind": "keyword",
-            "keyword": "string"
-          }
-        },
-        {
-          "name": "T",
-          "constraint": {
-            "repr": "Props",
-            "kind": "typeRef",
-            "typeRef": {
-              "typeParams": null,
-              "typeName": "Props"
-            }
-          }
-        }
-      ]
-    }
-  },
-  {
-    "kind": "import",
-    "name": "Props",
-    "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/create_template.ts",
-      "line": 7,
-      "col": 0
-    },
-    "declarationKind": "private",
-    "jsDoc": {
-      "doc": "This file exports the createTemplate function.\n",
-      "tags": [
-        {
-          "kind": "unsupported",
-          "value": "@copyright 2022 integereleven. All rights reserved. MIT license."
-        }
-      ]
-    },
-    "importDef": {
-      "src": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/types/mod.ts",
-      "imported": "Props"
-    }
-  },
-  {
-    "kind": "import",
-    "name": "TemplateCallback",
-    "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/create_template.ts",
-      "line": 7,
-      "col": 0
-    },
-    "declarationKind": "private",
-    "jsDoc": {
-      "doc": "This file exports the createTemplate function.\n",
-      "tags": [
-        {
-          "kind": "unsupported",
-          "value": "@copyright 2022 integereleven. All rights reserved. MIT license."
-        }
-      ]
-    },
-    "importDef": {
-      "src": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/types/mod.ts",
-      "imported": "TemplateCallback"
-    }
-  },
-  {
-    "kind": "function",
     "name": "requestPermissions",
     "location": {
       "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/request_permissions.ts",
@@ -1738,42 +1857,6 @@
       },
       "hasBody": true,
       "isAsync": true,
-      "isGenerator": false,
-      "typeParams": []
-    }
-  },
-  {
-    "kind": "function",
-    "name": "createFilename",
-    "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/create_filename.ts",
-      "line": 19,
-      "col": 0
-    },
-    "declarationKind": "export",
-    "jsDoc": {
-      "doc": "Create a filename from a string, `name`."
-    },
-    "functionDef": {
-      "params": [
-        {
-          "kind": "identifier",
-          "name": "name",
-          "optional": false,
-          "tsType": {
-            "repr": "string",
-            "kind": "keyword",
-            "keyword": "string"
-          }
-        }
-      ],
-      "returnType": {
-        "repr": "string",
-        "kind": "keyword",
-        "keyword": "string"
-      },
-      "hasBody": true,
-      "isAsync": false,
       "isGenerator": false,
       "typeParams": []
     }
@@ -1961,89 +2044,6 @@
     "importDef": {
       "src": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/types/mod.ts",
       "imported": "TemplateConditionCallback"
-    }
-  },
-  {
-    "kind": "function",
-    "name": "printAsciiBanner",
-    "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/print_ascii_banner.ts",
-      "line": 36,
-      "col": 0
-    },
-    "declarationKind": "export",
-    "jsDoc": {
-      "doc": "Prints a formatted partic11e banner with a tool `name`."
-    },
-    "functionDef": {
-      "params": [
-        {
-          "kind": "identifier",
-          "name": "name",
-          "optional": false,
-          "tsType": {
-            "repr": "string",
-            "kind": "keyword",
-            "keyword": "string"
-          }
-        }
-      ],
-      "returnType": {
-        "repr": "void",
-        "kind": "keyword",
-        "keyword": "void"
-      },
-      "hasBody": true,
-      "isAsync": false,
-      "isGenerator": false,
-      "typeParams": []
-    }
-  },
-  {
-    "kind": "import",
-    "name": "colors",
-    "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/print_ascii_banner.ts",
-      "line": 7,
-      "col": 0
-    },
-    "declarationKind": "private",
-    "jsDoc": {
-      "doc": "This file exports the printAsciiBanner function.\n",
-      "tags": [
-        {
-          "kind": "unsupported",
-          "value": "@copyright 2022 integereleven. All rights reserved. MIT license."
-        }
-      ]
-    },
-    "importDef": {
-      "src": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/deps.ts",
-      "imported": "colors"
-    }
-  },
-  {
-    "kind": "variable",
-    "name": "VERSION",
-    "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/version.ts",
-      "line": 10,
-      "col": 13
-    },
-    "declarationKind": "export",
-    "jsDoc": {
-      "doc": "The current release version of the partic11e repo-svc package."
-    },
-    "variableDef": {
-      "tsType": {
-        "repr": "0.0.0",
-        "kind": "literal",
-        "literal": {
-          "kind": "string",
-          "string": "0.0.0"
-        }
-      },
-      "kind": "const"
     }
   }
 ]
