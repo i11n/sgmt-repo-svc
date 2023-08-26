@@ -1,0 +1,21 @@
+/**
+ * This file exports the template for creating a src/types/types.ts file.
+ *
+ * @copyright 2022 integereleven. All rights reserved. MIT license.
+ */
+
+import { createTemplate } from '../util/create_template.ts';
+
+import type { PackageProps, PackagePropsPath } from '../types/mod.ts';
+
+export const srcTypesTypesTs = createTemplate<
+  PackagePropsPath,
+  PackageProps
+>`/**
+ * This file exports type aliases used by the ${'pkg.name'} package and its peer and dependant packages.
+ *
+ * For type aliases, see ./interfaces.ts.
+ *
+ * @copyright 2022 integereleven. All rights reserved. MIT license.
+ */
+`;

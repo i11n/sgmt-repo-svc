@@ -1,0 +1,10 @@
+{
+  "deno.codeLens.implementations": true,
+  "deno.codeLens.references": true,
+  "deno.codeLens.referencesAllFunctions": true,
+  "deno.codeLens.test": true,
+  "deno.enable": true,
+  "deno.inlayHints.enumMemberValues.enabled": false,
+  "deno.inlayHints.functionLikeReturnTypes.enabled": false,
+  "editor.tabSize": 2
+}
