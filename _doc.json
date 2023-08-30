@@ -1,801 +1,200 @@
 [
   {
-    "kind": "variable",
-    "name": "VERSION",
+    "kind": "function",
+    "name": "tplIf",
     "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/version.ts",
-      "line": 10,
-      "col": 13
-    },
-    "declarationKind": "export",
-    "jsDoc": {
-      "doc": "The current release version of the partic11e repo-svc package."
-    },
-    "variableDef": {
-      "tsType": {
-        "repr": "0.0.0",
-        "kind": "literal",
-        "literal": {
-          "kind": "string",
-          "string": "0.0.0"
-        }
-      },
-      "kind": "const"
-    }
-  },
-  {
-    "kind": "typeAlias",
-    "name": "ExceptionProps",
-    "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/types/types.ts",
-      "line": 65,
+      "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/util/tpl_if.ts",
+      "line": 14,
       "col": 0
     },
     "declarationKind": "export",
-    "typeAliasDef": {
-      "tsType": {
-        "repr": "",
-        "kind": "intersection",
-        "intersection": [
-          {
-            "repr": "FeatureProps",
+    "jsDoc": {
+      "doc": "Process a template conditionally."
+    },
+    "functionDef": {
+      "params": [
+        {
+          "kind": "identifier",
+          "name": "condition",
+          "optional": false,
+          "tsType": {
+            "repr": "TemplateConditionCallback",
             "kind": "typeRef",
             "typeRef": {
-              "typeParams": null,
-              "typeName": "FeatureProps"
-            }
-          },
-          {
-            "repr": "",
-            "kind": "typeLiteral",
-            "typeLiteral": {
-              "methods": [],
-              "properties": [
+              "typeParams": [
                 {
-                  "name": "exception",
-                  "params": [],
-                  "computed": false,
-                  "optional": false,
-                  "tsType": {
-                    "repr": "",
-                    "kind": "typeLiteral",
-                    "typeLiteral": {
-                      "methods": [],
-                      "properties": [
-                        {
-                          "name": "message",
-                          "params": [],
-                          "computed": false,
-                          "optional": false,
-                          "tsType": {
-                            "repr": "string",
-                            "kind": "keyword",
-                            "keyword": "string"
-                          },
-                          "typeParams": []
-                        },
-                        {
-                          "name": "code",
-                          "params": [],
-                          "computed": false,
-                          "optional": false,
-                          "tsType": {
-                            "repr": "string",
-                            "kind": "keyword",
-                            "keyword": "string"
-                          },
-                          "typeParams": []
-                        }
-                      ],
-                      "callSignatures": [],
-                      "indexSignatures": []
-                    }
-                  },
-                  "typeParams": []
+                  "repr": "T",
+                  "kind": "typeRef",
+                  "typeRef": {
+                    "typeParams": null,
+                    "typeName": "T"
+                  }
                 }
               ],
-              "callSignatures": [],
-              "indexSignatures": []
+              "typeName": "TemplateConditionCallback"
             }
           }
-        ]
-      },
-      "typeParams": []
-    }
-  },
-  {
-    "kind": "typeAlias",
-    "name": "ExceptionPropsPath",
-    "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/types/types.ts",
-      "line": 73,
-      "col": 0
-    },
-    "declarationKind": "export",
-    "jsDoc": {
-      "doc": "The available paths for an exception's properties."
-    },
-    "typeAliasDef": {
-      "tsType": {
-        "repr": "JoinPath",
+        },
+        {
+          "kind": "identifier",
+          "name": "trueCallback",
+          "optional": false,
+          "tsType": {
+            "repr": "TemplateCallback",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": [
+                {
+                  "repr": "T",
+                  "kind": "typeRef",
+                  "typeRef": {
+                    "typeParams": null,
+                    "typeName": "T"
+                  }
+                }
+              ],
+              "typeName": "TemplateCallback"
+            }
+          }
+        },
+        {
+          "kind": "identifier",
+          "name": "falseCallback",
+          "optional": true,
+          "tsType": {
+            "repr": "TemplateCallback",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": [
+                {
+                  "repr": "T",
+                  "kind": "typeRef",
+                  "typeRef": {
+                    "typeParams": null,
+                    "typeName": "T"
+                  }
+                }
+              ],
+              "typeName": "TemplateCallback"
+            }
+          }
+        }
+      ],
+      "returnType": {
+        "repr": "TemplateCallback",
         "kind": "typeRef",
         "typeRef": {
           "typeParams": [
             {
-              "repr": "StringPath",
+              "repr": "T",
               "kind": "typeRef",
               "typeRef": {
-                "typeParams": [
-                  {
-                    "repr": "ExceptionProps",
-                    "kind": "typeRef",
-                    "typeRef": {
-                      "typeParams": null,
-                      "typeName": "ExceptionProps"
-                    }
-                  }
-                ],
-                "typeName": "StringPath"
-              }
-            },
-            {
-              "repr": ".",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "."
+                "typeParams": null,
+                "typeName": "T"
               }
             }
           ],
-          "typeName": "JoinPath"
+          "typeName": "TemplateCallback"
         }
       },
-      "typeParams": []
-    }
-  },
-  {
-    "kind": "typeAlias",
-    "name": "FeatureProps",
-    "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/types/types.ts",
-      "line": 54,
-      "col": 0
-    },
-    "declarationKind": "export",
-    "jsDoc": {
-      "doc": "Feature properties."
-    },
-    "typeAliasDef": {
-      "tsType": {
-        "repr": "",
-        "kind": "intersection",
-        "intersection": [
-          {
-            "repr": "PackageProps",
+      "hasBody": true,
+      "isAsync": false,
+      "isGenerator": false,
+      "typeParams": [
+        {
+          "name": "T",
+          "constraint": {
+            "repr": "Props",
             "kind": "typeRef",
             "typeRef": {
               "typeParams": null,
-              "typeName": "PackageProps"
-            }
-          },
-          {
-            "repr": "",
-            "kind": "typeLiteral",
-            "typeLiteral": {
-              "methods": [],
-              "properties": [
-                {
-                  "name": "feature",
-                  "params": [],
-                  "computed": false,
-                  "optional": false,
-                  "tsType": {
-                    "repr": "",
-                    "kind": "typeLiteral",
-                    "typeLiteral": {
-                      "methods": [],
-                      "properties": [
-                        {
-                          "name": "name",
-                          "params": [],
-                          "computed": false,
-                          "optional": false,
-                          "tsType": {
-                            "repr": "string",
-                            "kind": "keyword",
-                            "keyword": "string"
-                          },
-                          "typeParams": []
-                        },
-                        {
-                          "name": "type",
-                          "params": [],
-                          "computed": false,
-                          "optional": false,
-                          "tsType": {
-                            "repr": "string",
-                            "kind": "keyword",
-                            "keyword": "string"
-                          },
-                          "typeParams": []
-                        },
-                        {
-                          "name": "description",
-                          "params": [],
-                          "computed": false,
-                          "optional": false,
-                          "tsType": {
-                            "repr": "string",
-                            "kind": "keyword",
-                            "keyword": "string"
-                          },
-                          "typeParams": []
-                        }
-                      ],
-                      "callSignatures": [],
-                      "indexSignatures": []
-                    }
-                  },
-                  "typeParams": []
-                }
-              ],
-              "callSignatures": [],
-              "indexSignatures": []
+              "typeName": "Props"
             }
           }
-        ]
-      },
-      "typeParams": []
-    }
-  },
-  {
-    "kind": "typeAlias",
-    "name": "FeaturePropsPath",
-    "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/types/types.ts",
-      "line": 63,
-      "col": 0
-    },
-    "declarationKind": "export",
-    "jsDoc": {
-      "doc": "The available paths for a feature's properties."
-    },
-    "typeAliasDef": {
-      "tsType": {
-        "repr": "JoinPath",
-        "kind": "typeRef",
-        "typeRef": {
-          "typeParams": [
-            {
-              "repr": "StringPath",
-              "kind": "typeRef",
-              "typeRef": {
-                "typeParams": [
-                  {
-                    "repr": "FeatureProps",
-                    "kind": "typeRef",
-                    "typeRef": {
-                      "typeParams": null,
-                      "typeName": "FeatureProps"
-                    }
-                  }
-                ],
-                "typeName": "StringPath"
-              }
-            },
-            {
-              "repr": ".",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "."
-              }
-            }
-          ],
-          "typeName": "JoinPath"
         }
-      },
-      "typeParams": []
+      ]
     }
   },
   {
-    "kind": "typeAlias",
-    "name": "PackageProps",
-    "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/types/types.ts",
-      "line": 41,
-      "col": 0
-    },
-    "declarationKind": "export",
-    "jsDoc": {
-      "doc": "Package properties and metadata."
-    },
-    "typeAliasDef": {
-      "tsType": {
-        "repr": "",
-        "kind": "intersection",
-        "intersection": [
-          {
-            "repr": "MetaProps",
-            "kind": "typeRef",
-            "typeRef": {
-              "typeParams": null,
-              "typeName": "MetaProps"
-            }
-          },
-          {
-            "repr": "",
-            "kind": "typeLiteral",
-            "typeLiteral": {
-              "methods": [],
-              "properties": [
-                {
-                  "name": "pkg",
-                  "params": [],
-                  "computed": false,
-                  "optional": false,
-                  "tsType": {
-                    "repr": "",
-                    "kind": "typeLiteral",
-                    "typeLiteral": {
-                      "methods": [],
-                      "properties": [
-                        {
-                          "name": "name",
-                          "params": [],
-                          "computed": false,
-                          "optional": false,
-                          "tsType": {
-                            "repr": "string",
-                            "kind": "keyword",
-                            "keyword": "string"
-                          },
-                          "typeParams": []
-                        },
-                        {
-                          "name": "description",
-                          "params": [],
-                          "computed": false,
-                          "optional": false,
-                          "tsType": {
-                            "repr": "string",
-                            "kind": "keyword",
-                            "keyword": "string"
-                          },
-                          "typeParams": []
-                        },
-                        {
-                          "name": "version",
-                          "params": [],
-                          "computed": false,
-                          "optional": false,
-                          "tsType": {
-                            "repr": "string",
-                            "kind": "keyword",
-                            "keyword": "string"
-                          },
-                          "typeParams": []
-                        },
-                        {
-                          "name": "status",
-                          "params": [],
-                          "computed": false,
-                          "optional": false,
-                          "tsType": {
-                            "repr": "string",
-                            "kind": "keyword",
-                            "keyword": "string"
-                          },
-                          "typeParams": []
-                        }
-                      ],
-                      "callSignatures": [],
-                      "indexSignatures": []
-                    }
-                  },
-                  "typeParams": []
-                }
-              ],
-              "callSignatures": [],
-              "indexSignatures": []
-            }
-          }
-        ]
-      },
-      "typeParams": []
-    }
-  },
-  {
-    "kind": "typeAlias",
-    "name": "PackagePropsPath",
-    "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/types/types.ts",
-      "line": 51,
-      "col": 0
-    },
-    "declarationKind": "export",
-    "jsDoc": {
-      "doc": "The available paths for a package's properties."
-    },
-    "typeAliasDef": {
-      "tsType": {
-        "repr": "JoinPath",
-        "kind": "typeRef",
-        "typeRef": {
-          "typeParams": [
-            {
-              "repr": "StringPath",
-              "kind": "typeRef",
-              "typeRef": {
-                "typeParams": [
-                  {
-                    "repr": "PackageProps",
-                    "kind": "typeRef",
-                    "typeRef": {
-                      "typeParams": null,
-                      "typeName": "PackageProps"
-                    }
-                  }
-                ],
-                "typeName": "StringPath"
-              }
-            },
-            {
-              "repr": ".",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "."
-              }
-            }
-          ],
-          "typeName": "JoinPath"
-        }
-      },
-      "typeParams": []
-    }
-  },
-  {
-    "kind": "typeAlias",
+    "kind": "import",
     "name": "Props",
     "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/types/types.ts",
-      "line": 27,
+      "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/util/tpl_if.ts",
+      "line": 7,
       "col": 0
     },
-    "declarationKind": "export",
+    "declarationKind": "private",
     "jsDoc": {
-      "doc": "Generic properties object."
-    },
-    "typeAliasDef": {
-      "tsType": {
-        "repr": "",
-        "kind": "typeLiteral",
-        "typeLiteral": {
-          "methods": [],
-          "properties": [],
-          "callSignatures": [],
-          "indexSignatures": [
-            {
-              "readonly": false,
-              "params": [
-                {
-                  "kind": "identifier",
-                  "name": "key",
-                  "optional": false,
-                  "tsType": {
-                    "repr": "string",
-                    "kind": "keyword",
-                    "keyword": "string"
-                  }
-                }
-              ],
-              "tsType": {
-                "repr": "any",
-                "kind": "keyword",
-                "keyword": "any"
-              }
-            }
-          ]
+      "doc": "This file exports the tplIf function.\n",
+      "tags": [
+        {
+          "kind": "unsupported",
+          "value": "@copyright 2022 integereleven. All rights reserved. MIT license."
         }
-      },
-      "typeParams": []
+      ]
+    },
+    "importDef": {
+      "src": "file:///C:/repos/sgmt/sgmt-repo-svc/src/types/mod.ts",
+      "imported": "Props"
     }
   },
   {
-    "kind": "typeAlias",
+    "kind": "import",
     "name": "TemplateCallback",
     "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/types/types.ts",
-      "line": 10,
+      "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/util/tpl_if.ts",
+      "line": 7,
       "col": 0
     },
-    "declarationKind": "export",
+    "declarationKind": "private",
     "jsDoc": {
-      "doc": "A callback returning a string interpolated with the provided properties, `props`."
-    },
-    "typeAliasDef": {
-      "tsType": {
-        "repr": "",
-        "kind": "fnOrConstructor",
-        "fnOrConstructor": {
-          "constructor": false,
-          "tsType": {
-            "repr": "string",
-            "kind": "keyword",
-            "keyword": "string"
-          },
-          "params": [
-            {
-              "kind": "identifier",
-              "name": "props",
-              "optional": false,
-              "tsType": {
-                "repr": "T",
-                "kind": "typeRef",
-                "typeRef": {
-                  "typeParams": null,
-                  "typeName": "T"
-                }
-              }
-            }
-          ],
-          "typeParams": []
-        }
-      },
-      "typeParams": [
+      "doc": "This file exports the tplIf function.\n",
+      "tags": [
         {
-          "name": "T",
-          "constraint": {
-            "repr": "Props",
-            "kind": "typeRef",
-            "typeRef": {
-              "typeParams": null,
-              "typeName": "Props"
-            }
-          }
+          "kind": "unsupported",
+          "value": "@copyright 2022 integereleven. All rights reserved. MIT license."
         }
       ]
+    },
+    "importDef": {
+      "src": "file:///C:/repos/sgmt/sgmt-repo-svc/src/types/mod.ts",
+      "imported": "TemplateCallback"
     }
   },
   {
-    "kind": "typeAlias",
+    "kind": "import",
     "name": "TemplateConditionCallback",
     "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/types/types.ts",
-      "line": 13,
+      "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/util/tpl_if.ts",
+      "line": 7,
       "col": 0
     },
-    "declarationKind": "export",
+    "declarationKind": "private",
     "jsDoc": {
-      "doc": "A callback returning a boolean value using the provided properties, `props`."
-    },
-    "typeAliasDef": {
-      "tsType": {
-        "repr": "",
-        "kind": "fnOrConstructor",
-        "fnOrConstructor": {
-          "constructor": false,
-          "tsType": {
-            "repr": "boolean",
-            "kind": "keyword",
-            "keyword": "boolean"
-          },
-          "params": [
-            {
-              "kind": "identifier",
-              "name": "props",
-              "optional": false,
-              "tsType": {
-                "repr": "T",
-                "kind": "typeRef",
-                "typeRef": {
-                  "typeParams": null,
-                  "typeName": "T"
-                }
-              }
-            }
-          ],
-          "typeParams": []
-        }
-      },
-      "typeParams": [
+      "doc": "This file exports the tplIf function.\n",
+      "tags": [
         {
-          "name": "T",
-          "constraint": {
-            "repr": "Props",
-            "kind": "typeRef",
-            "typeRef": {
-              "typeParams": null,
-              "typeName": "Props"
-            }
-          }
+          "kind": "unsupported",
+          "value": "@copyright 2022 integereleven. All rights reserved. MIT license."
         }
       ]
+    },
+    "importDef": {
+      "src": "file:///C:/repos/sgmt/sgmt-repo-svc/src/types/mod.ts",
+      "imported": "TemplateConditionCallback"
     }
   },
   {
     "kind": "function",
-    "name": "commitTask",
+    "name": "createFilename",
     "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/tasks/commit.task.ts",
-      "line": 109,
+      "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/util/create_filename.ts",
+      "line": 19,
       "col": 0
     },
     "declarationKind": "export",
     "jsDoc": {
-      "doc": "This function helps generate a commit message, optionally prompting the user to commit."
-    },
-    "functionDef": {
-      "params": [
-        {
-          "kind": "assign",
-          "left": {
-            "kind": "identifier",
-            "name": "testing",
-            "optional": false,
-            "tsType": null
-          },
-          "right": "[UNSUPPORTED]",
-          "tsType": null
-        },
-        {
-          "kind": "assign",
-          "left": {
-            "kind": "identifier",
-            "name": "logLevel",
-            "optional": false,
-            "tsType": null
-          },
-          "right": "[UNSUPPORTED]",
-          "tsType": null
-        }
-      ],
-      "returnType": {
-        "repr": "Promise",
-        "kind": "typeRef",
-        "typeRef": {
-          "typeParams": [
-            {
-              "repr": "void",
-              "kind": "keyword",
-              "keyword": "void"
-            }
-          ],
-          "typeName": "Promise"
-        }
-      },
-      "hasBody": true,
-      "isAsync": true,
-      "isGenerator": false,
-      "typeParams": []
-    }
-  },
-  {
-    "kind": "function",
-    "name": "bumpVersionTask",
-    "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/tasks/bump_version.task.ts",
-      "line": 41,
-      "col": 0
-    },
-    "declarationKind": "export",
-    "jsDoc": {
-      "doc": "This function bumps the version in the deno config file and version file."
-    },
-    "functionDef": {
-      "params": [
-        {
-          "kind": "assign",
-          "left": {
-            "kind": "identifier",
-            "name": "testing",
-            "optional": false,
-            "tsType": null
-          },
-          "right": "[UNSUPPORTED]",
-          "tsType": null
-        },
-        {
-          "kind": "assign",
-          "left": {
-            "kind": "identifier",
-            "name": "logLevel",
-            "optional": false,
-            "tsType": null
-          },
-          "right": "[UNSUPPORTED]",
-          "tsType": null
-        }
-      ],
-      "returnType": {
-        "repr": "Promise",
-        "kind": "typeRef",
-        "typeRef": {
-          "typeParams": [
-            {
-              "repr": "void",
-              "kind": "keyword",
-              "keyword": "void"
-            }
-          ],
-          "typeName": "Promise"
-        }
-      },
-      "hasBody": true,
-      "isAsync": true,
-      "isGenerator": false,
-      "typeParams": []
-    }
-  },
-  {
-    "kind": "function",
-    "name": "initRepoTask",
-    "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/tasks/init_repo.task.ts",
-      "line": 71,
-      "col": 0
-    },
-    "declarationKind": "export",
-    "jsDoc": {
-      "doc": "Initializes a repo with the sgmt repo scaffold."
-    },
-    "functionDef": {
-      "params": [
-        {
-          "kind": "assign",
-          "left": {
-            "kind": "identifier",
-            "name": "testing",
-            "optional": false,
-            "tsType": null
-          },
-          "right": "[UNSUPPORTED]",
-          "tsType": null
-        },
-        {
-          "kind": "assign",
-          "left": {
-            "kind": "identifier",
-            "name": "logLevel",
-            "optional": false,
-            "tsType": null
-          },
-          "right": "[UNSUPPORTED]",
-          "tsType": null
-        }
-      ],
-      "returnType": {
-        "repr": "Promise",
-        "kind": "typeRef",
-        "typeRef": {
-          "typeParams": [
-            {
-              "repr": "void",
-              "kind": "keyword",
-              "keyword": "void"
-            }
-          ],
-          "typeName": "Promise"
-        }
-      },
-      "hasBody": true,
-      "isAsync": true,
-      "isGenerator": false,
-      "typeParams": []
-    }
-  },
-  {
-    "kind": "function",
-    "name": "printAsciiBanner",
-    "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/print_ascii_banner.ts",
-      "line": 36,
-      "col": 0
-    },
-    "declarationKind": "export",
-    "jsDoc": {
-      "doc": "Prints a formatted partic11e banner with a tool `name`."
+      "doc": "Create a filename from a string, `name`."
     },
     "functionDef": {
       "params": [
@@ -811,9 +210,9 @@
         }
       ],
       "returnType": {
-        "repr": "void",
+        "repr": "string",
         "kind": "keyword",
-        "keyword": "void"
+        "keyword": "string"
       },
       "hasBody": true,
       "isAsync": false,
@@ -822,33 +221,10 @@
     }
   },
   {
-    "kind": "import",
-    "name": "colors",
-    "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/print_ascii_banner.ts",
-      "line": 7,
-      "col": 0
-    },
-    "declarationKind": "private",
-    "jsDoc": {
-      "doc": "This file exports the printAsciiBanner function.\n",
-      "tags": [
-        {
-          "kind": "unsupported",
-          "value": "@copyright 2022 integereleven. All rights reserved. MIT license."
-        }
-      ]
-    },
-    "importDef": {
-      "src": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/deps.ts",
-      "imported": "colors"
-    }
-  },
-  {
     "kind": "function",
     "name": "createTemplate",
     "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/create_template.ts",
+      "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/util/create_template.ts",
       "line": 16,
       "col": 0
     },
@@ -967,7 +343,7 @@
     "kind": "import",
     "name": "Props",
     "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/create_template.ts",
+      "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/util/create_template.ts",
       "line": 7,
       "col": 0
     },
@@ -982,7 +358,7 @@
       ]
     },
     "importDef": {
-      "src": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/types/mod.ts",
+      "src": "file:///C:/repos/sgmt/sgmt-repo-svc/src/types/mod.ts",
       "imported": "Props"
     }
   },
@@ -990,7 +366,7 @@
     "kind": "import",
     "name": "TemplateCallback",
     "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/create_template.ts",
+      "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/util/create_template.ts",
       "line": 7,
       "col": 0
     },
@@ -1005,7 +381,7 @@
       ]
     },
     "importDef": {
-      "src": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/types/mod.ts",
+      "src": "file:///C:/repos/sgmt/sgmt-repo-svc/src/types/mod.ts",
       "imported": "TemplateCallback"
     }
   },
@@ -1013,7 +389,7 @@
     "kind": "class",
     "name": "Cli",
     "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
+      "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
       "line": 16,
       "col": 0
     },
@@ -1066,7 +442,7 @@
             }
           ],
           "location": {
-            "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
+            "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
             "line": 23,
             "col": 2
           }
@@ -1089,7 +465,7 @@
           "isStatic": false,
           "name": "options",
           "location": {
-            "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
+            "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
             "line": 17,
             "col": 2
           }
@@ -1117,7 +493,7 @@
             "typeParams": []
           },
           "location": {
-            "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
+            "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
             "line": 32,
             "col": 2
           }
@@ -1153,7 +529,7 @@
             "typeParams": []
           },
           "location": {
-            "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
+            "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
             "line": 36,
             "col": 2
           }
@@ -1178,7 +554,7 @@
             "typeParams": []
           },
           "location": {
-            "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
+            "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
             "line": 42,
             "col": 2
           }
@@ -1214,7 +590,7 @@
             "typeParams": []
           },
           "location": {
-            "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
+            "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
             "line": 46,
             "col": 2
           }
@@ -1250,7 +626,7 @@
             "typeParams": []
           },
           "location": {
-            "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
+            "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
             "line": 50,
             "col": 2
           }
@@ -1297,7 +673,7 @@
             "typeParams": []
           },
           "location": {
-            "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
+            "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
             "line": 54,
             "col": 2
           }
@@ -1333,7 +709,7 @@
             "typeParams": []
           },
           "location": {
-            "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
+            "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
             "line": 58,
             "col": 2
           }
@@ -1379,7 +755,7 @@
             "typeParams": []
           },
           "location": {
-            "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
+            "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
             "line": 68,
             "col": 2
           }
@@ -1415,7 +791,7 @@
             "typeParams": []
           },
           "location": {
-            "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
+            "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
             "line": 80,
             "col": 2
           }
@@ -1451,7 +827,7 @@
             "typeParams": []
           },
           "location": {
-            "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
+            "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
             "line": 86,
             "col": 2
           }
@@ -1487,7 +863,7 @@
             "typeParams": []
           },
           "location": {
-            "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
+            "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
             "line": 92,
             "col": 2
           }
@@ -1523,7 +899,7 @@
             "typeParams": []
           },
           "location": {
-            "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
+            "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
             "line": 98,
             "col": 2
           }
@@ -1559,7 +935,7 @@
             "typeParams": []
           },
           "location": {
-            "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
+            "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
             "line": 104,
             "col": 2
           }
@@ -1595,7 +971,7 @@
             "typeParams": []
           },
           "location": {
-            "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
+            "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
             "line": 110,
             "col": 2
           }
@@ -1631,7 +1007,7 @@
             "typeParams": []
           },
           "location": {
-            "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
+            "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
             "line": 116,
             "col": 2
           }
@@ -1647,7 +1023,7 @@
     "kind": "import",
     "name": "colors",
     "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
+      "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
       "line": 7,
       "col": 0
     },
@@ -1662,7 +1038,7 @@
       ]
     },
     "importDef": {
-      "src": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/deps.ts",
+      "src": "file:///C:/repos/sgmt/sgmt-repo-svc/deps.ts",
       "imported": "colors"
     }
   },
@@ -1670,57 +1046,21 @@
     "kind": "import",
     "name": "printAsciiBanner",
     "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
+      "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/util/cli.ts",
       "line": 8,
       "col": 0
     },
     "declarationKind": "private",
     "importDef": {
-      "src": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/print_ascii_banner.ts",
+      "src": "file:///C:/repos/sgmt/sgmt-repo-svc/src/util/print_ascii_banner.ts",
       "imported": "printAsciiBanner"
-    }
-  },
-  {
-    "kind": "function",
-    "name": "createFilename",
-    "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/create_filename.ts",
-      "line": 19,
-      "col": 0
-    },
-    "declarationKind": "export",
-    "jsDoc": {
-      "doc": "Create a filename from a string, `name`."
-    },
-    "functionDef": {
-      "params": [
-        {
-          "kind": "identifier",
-          "name": "name",
-          "optional": false,
-          "tsType": {
-            "repr": "string",
-            "kind": "keyword",
-            "keyword": "string"
-          }
-        }
-      ],
-      "returnType": {
-        "repr": "string",
-        "kind": "keyword",
-        "keyword": "string"
-      },
-      "hasBody": true,
-      "isAsync": false,
-      "isGenerator": false,
-      "typeParams": []
     }
   },
   {
     "kind": "function",
     "name": "parseArgs",
     "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/parse_args.ts",
+      "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/util/parse_args.ts",
       "line": 10,
       "col": 0
     },
@@ -1790,7 +1130,7 @@
     "kind": "import",
     "name": "parse",
     "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/parse_args.ts",
+      "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/util/parse_args.ts",
       "line": 7,
       "col": 0
     },
@@ -1805,15 +1145,74 @@
       ]
     },
     "importDef": {
-      "src": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/deps.ts",
+      "src": "file:///C:/repos/sgmt/sgmt-repo-svc/deps.ts",
       "imported": "parse"
+    }
+  },
+  {
+    "kind": "function",
+    "name": "printAsciiBanner",
+    "location": {
+      "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/util/print_ascii_banner.ts",
+      "line": 37,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "Prints a formatted partic11e banner with a tool `name`."
+    },
+    "functionDef": {
+      "params": [
+        {
+          "kind": "identifier",
+          "name": "name",
+          "optional": false,
+          "tsType": {
+            "repr": "string",
+            "kind": "keyword",
+            "keyword": "string"
+          }
+        }
+      ],
+      "returnType": {
+        "repr": "void",
+        "kind": "keyword",
+        "keyword": "void"
+      },
+      "hasBody": true,
+      "isAsync": false,
+      "isGenerator": false,
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "import",
+    "name": "colors",
+    "location": {
+      "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/util/print_ascii_banner.ts",
+      "line": 7,
+      "col": 0
+    },
+    "declarationKind": "private",
+    "jsDoc": {
+      "doc": "This file exports the printAsciiBanner function.\n",
+      "tags": [
+        {
+          "kind": "unsupported",
+          "value": "@copyright 2022 integereleven. All rights reserved. MIT license."
+        }
+      ]
+    },
+    "importDef": {
+      "src": "file:///C:/repos/sgmt/sgmt-repo-svc/deps.ts",
+      "imported": "colors"
     }
   },
   {
     "kind": "function",
     "name": "requestPermissions",
     "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/request_permissions.ts",
+      "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/util/request_permissions.ts",
       "line": 23,
       "col": 0
     },
@@ -1862,106 +1261,549 @@
     }
   },
   {
-    "kind": "function",
-    "name": "tplIf",
+    "kind": "variable",
+    "name": "VERSION",
     "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/tpl_if.ts",
-      "line": 14,
+      "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/version.ts",
+      "line": 10,
+      "col": 13
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "The current release version of the partic11e repo-svc package."
+    },
+    "variableDef": {
+      "tsType": {
+        "repr": "0.0.0",
+        "kind": "literal",
+        "literal": {
+          "kind": "string",
+          "string": "0.0.0"
+        }
+      },
+      "kind": "const"
+    }
+  },
+  {
+    "kind": "typeAlias",
+    "name": "ExceptionProps",
+    "location": {
+      "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/types/types.ts",
+      "line": 65,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "typeAliasDef": {
+      "tsType": {
+        "repr": "",
+        "kind": "intersection",
+        "intersection": [
+          {
+            "repr": "FeatureProps",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "FeatureProps"
+            }
+          },
+          {
+            "repr": "",
+            "kind": "typeLiteral",
+            "typeLiteral": {
+              "methods": [],
+              "properties": [
+                {
+                  "name": "exception",
+                  "params": [],
+                  "computed": false,
+                  "optional": false,
+                  "tsType": {
+                    "repr": "",
+                    "kind": "typeLiteral",
+                    "typeLiteral": {
+                      "methods": [],
+                      "properties": [
+                        {
+                          "name": "message",
+                          "params": [],
+                          "computed": false,
+                          "optional": false,
+                          "tsType": {
+                            "repr": "string",
+                            "kind": "keyword",
+                            "keyword": "string"
+                          },
+                          "typeParams": []
+                        },
+                        {
+                          "name": "code",
+                          "params": [],
+                          "computed": false,
+                          "optional": false,
+                          "tsType": {
+                            "repr": "string",
+                            "kind": "keyword",
+                            "keyword": "string"
+                          },
+                          "typeParams": []
+                        }
+                      ],
+                      "callSignatures": [],
+                      "indexSignatures": []
+                    }
+                  },
+                  "typeParams": []
+                }
+              ],
+              "callSignatures": [],
+              "indexSignatures": []
+            }
+          }
+        ]
+      },
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "typeAlias",
+    "name": "ExceptionPropsPath",
+    "location": {
+      "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/types/types.ts",
+      "line": 73,
       "col": 0
     },
     "declarationKind": "export",
     "jsDoc": {
-      "doc": "Process a template conditionally."
+      "doc": "The available paths for an exception's properties."
     },
-    "functionDef": {
-      "params": [
-        {
-          "kind": "identifier",
-          "name": "condition",
-          "optional": false,
-          "tsType": {
-            "repr": "TemplateConditionCallback",
-            "kind": "typeRef",
-            "typeRef": {
-              "typeParams": [
-                {
-                  "repr": "T",
-                  "kind": "typeRef",
-                  "typeRef": {
-                    "typeParams": null,
-                    "typeName": "T"
-                  }
-                }
-              ],
-              "typeName": "TemplateConditionCallback"
-            }
-          }
-        },
-        {
-          "kind": "identifier",
-          "name": "trueCallback",
-          "optional": false,
-          "tsType": {
-            "repr": "TemplateCallback",
-            "kind": "typeRef",
-            "typeRef": {
-              "typeParams": [
-                {
-                  "repr": "T",
-                  "kind": "typeRef",
-                  "typeRef": {
-                    "typeParams": null,
-                    "typeName": "T"
-                  }
-                }
-              ],
-              "typeName": "TemplateCallback"
-            }
-          }
-        },
-        {
-          "kind": "identifier",
-          "name": "falseCallback",
-          "optional": true,
-          "tsType": {
-            "repr": "TemplateCallback",
-            "kind": "typeRef",
-            "typeRef": {
-              "typeParams": [
-                {
-                  "repr": "T",
-                  "kind": "typeRef",
-                  "typeRef": {
-                    "typeParams": null,
-                    "typeName": "T"
-                  }
-                }
-              ],
-              "typeName": "TemplateCallback"
-            }
-          }
-        }
-      ],
-      "returnType": {
-        "repr": "TemplateCallback",
+    "typeAliasDef": {
+      "tsType": {
+        "repr": "JoinPath",
         "kind": "typeRef",
         "typeRef": {
           "typeParams": [
             {
-              "repr": "T",
+              "repr": "StringPath",
               "kind": "typeRef",
               "typeRef": {
-                "typeParams": null,
-                "typeName": "T"
+                "typeParams": [
+                  {
+                    "repr": "ExceptionProps",
+                    "kind": "typeRef",
+                    "typeRef": {
+                      "typeParams": null,
+                      "typeName": "ExceptionProps"
+                    }
+                  }
+                ],
+                "typeName": "StringPath"
+              }
+            },
+            {
+              "repr": ".",
+              "kind": "literal",
+              "literal": {
+                "kind": "string",
+                "string": "."
               }
             }
           ],
-          "typeName": "TemplateCallback"
+          "typeName": "JoinPath"
         }
       },
-      "hasBody": true,
-      "isAsync": false,
-      "isGenerator": false,
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "typeAlias",
+    "name": "FeatureProps",
+    "location": {
+      "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/types/types.ts",
+      "line": 54,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "Feature properties."
+    },
+    "typeAliasDef": {
+      "tsType": {
+        "repr": "",
+        "kind": "intersection",
+        "intersection": [
+          {
+            "repr": "PackageProps",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "PackageProps"
+            }
+          },
+          {
+            "repr": "",
+            "kind": "typeLiteral",
+            "typeLiteral": {
+              "methods": [],
+              "properties": [
+                {
+                  "name": "feature",
+                  "params": [],
+                  "computed": false,
+                  "optional": false,
+                  "tsType": {
+                    "repr": "",
+                    "kind": "typeLiteral",
+                    "typeLiteral": {
+                      "methods": [],
+                      "properties": [
+                        {
+                          "name": "name",
+                          "params": [],
+                          "computed": false,
+                          "optional": false,
+                          "tsType": {
+                            "repr": "string",
+                            "kind": "keyword",
+                            "keyword": "string"
+                          },
+                          "typeParams": []
+                        },
+                        {
+                          "name": "type",
+                          "params": [],
+                          "computed": false,
+                          "optional": false,
+                          "tsType": {
+                            "repr": "string",
+                            "kind": "keyword",
+                            "keyword": "string"
+                          },
+                          "typeParams": []
+                        },
+                        {
+                          "name": "description",
+                          "params": [],
+                          "computed": false,
+                          "optional": false,
+                          "tsType": {
+                            "repr": "string",
+                            "kind": "keyword",
+                            "keyword": "string"
+                          },
+                          "typeParams": []
+                        }
+                      ],
+                      "callSignatures": [],
+                      "indexSignatures": []
+                    }
+                  },
+                  "typeParams": []
+                }
+              ],
+              "callSignatures": [],
+              "indexSignatures": []
+            }
+          }
+        ]
+      },
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "typeAlias",
+    "name": "FeaturePropsPath",
+    "location": {
+      "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/types/types.ts",
+      "line": 63,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "The available paths for a feature's properties."
+    },
+    "typeAliasDef": {
+      "tsType": {
+        "repr": "JoinPath",
+        "kind": "typeRef",
+        "typeRef": {
+          "typeParams": [
+            {
+              "repr": "StringPath",
+              "kind": "typeRef",
+              "typeRef": {
+                "typeParams": [
+                  {
+                    "repr": "FeatureProps",
+                    "kind": "typeRef",
+                    "typeRef": {
+                      "typeParams": null,
+                      "typeName": "FeatureProps"
+                    }
+                  }
+                ],
+                "typeName": "StringPath"
+              }
+            },
+            {
+              "repr": ".",
+              "kind": "literal",
+              "literal": {
+                "kind": "string",
+                "string": "."
+              }
+            }
+          ],
+          "typeName": "JoinPath"
+        }
+      },
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "typeAlias",
+    "name": "PackageProps",
+    "location": {
+      "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/types/types.ts",
+      "line": 41,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "Package properties and metadata."
+    },
+    "typeAliasDef": {
+      "tsType": {
+        "repr": "",
+        "kind": "intersection",
+        "intersection": [
+          {
+            "repr": "MetaProps",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "MetaProps"
+            }
+          },
+          {
+            "repr": "",
+            "kind": "typeLiteral",
+            "typeLiteral": {
+              "methods": [],
+              "properties": [
+                {
+                  "name": "pkg",
+                  "params": [],
+                  "computed": false,
+                  "optional": false,
+                  "tsType": {
+                    "repr": "",
+                    "kind": "typeLiteral",
+                    "typeLiteral": {
+                      "methods": [],
+                      "properties": [
+                        {
+                          "name": "name",
+                          "params": [],
+                          "computed": false,
+                          "optional": false,
+                          "tsType": {
+                            "repr": "string",
+                            "kind": "keyword",
+                            "keyword": "string"
+                          },
+                          "typeParams": []
+                        },
+                        {
+                          "name": "description",
+                          "params": [],
+                          "computed": false,
+                          "optional": false,
+                          "tsType": {
+                            "repr": "string",
+                            "kind": "keyword",
+                            "keyword": "string"
+                          },
+                          "typeParams": []
+                        },
+                        {
+                          "name": "version",
+                          "params": [],
+                          "computed": false,
+                          "optional": false,
+                          "tsType": {
+                            "repr": "string",
+                            "kind": "keyword",
+                            "keyword": "string"
+                          },
+                          "typeParams": []
+                        },
+                        {
+                          "name": "status",
+                          "params": [],
+                          "computed": false,
+                          "optional": false,
+                          "tsType": {
+                            "repr": "string",
+                            "kind": "keyword",
+                            "keyword": "string"
+                          },
+                          "typeParams": []
+                        }
+                      ],
+                      "callSignatures": [],
+                      "indexSignatures": []
+                    }
+                  },
+                  "typeParams": []
+                }
+              ],
+              "callSignatures": [],
+              "indexSignatures": []
+            }
+          }
+        ]
+      },
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "typeAlias",
+    "name": "PackagePropsPath",
+    "location": {
+      "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/types/types.ts",
+      "line": 51,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "The available paths for a package's properties."
+    },
+    "typeAliasDef": {
+      "tsType": {
+        "repr": "JoinPath",
+        "kind": "typeRef",
+        "typeRef": {
+          "typeParams": [
+            {
+              "repr": "StringPath",
+              "kind": "typeRef",
+              "typeRef": {
+                "typeParams": [
+                  {
+                    "repr": "PackageProps",
+                    "kind": "typeRef",
+                    "typeRef": {
+                      "typeParams": null,
+                      "typeName": "PackageProps"
+                    }
+                  }
+                ],
+                "typeName": "StringPath"
+              }
+            },
+            {
+              "repr": ".",
+              "kind": "literal",
+              "literal": {
+                "kind": "string",
+                "string": "."
+              }
+            }
+          ],
+          "typeName": "JoinPath"
+        }
+      },
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "typeAlias",
+    "name": "Props",
+    "location": {
+      "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/types/types.ts",
+      "line": 27,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "Generic properties object."
+    },
+    "typeAliasDef": {
+      "tsType": {
+        "repr": "",
+        "kind": "typeLiteral",
+        "typeLiteral": {
+          "methods": [],
+          "properties": [],
+          "callSignatures": [],
+          "indexSignatures": [
+            {
+              "readonly": false,
+              "params": [
+                {
+                  "kind": "identifier",
+                  "name": "key",
+                  "optional": false,
+                  "tsType": {
+                    "repr": "string",
+                    "kind": "keyword",
+                    "keyword": "string"
+                  }
+                }
+              ],
+              "tsType": {
+                "repr": "any",
+                "kind": "keyword",
+                "keyword": "any"
+              }
+            }
+          ]
+        }
+      },
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "typeAlias",
+    "name": "TemplateCallback",
+    "location": {
+      "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/types/types.ts",
+      "line": 10,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "A callback returning a string interpolated with the provided properties, `props`."
+    },
+    "typeAliasDef": {
+      "tsType": {
+        "repr": "",
+        "kind": "fnOrConstructor",
+        "fnOrConstructor": {
+          "constructor": false,
+          "tsType": {
+            "repr": "string",
+            "kind": "keyword",
+            "keyword": "string"
+          },
+          "params": [
+            {
+              "kind": "identifier",
+              "name": "props",
+              "optional": false,
+              "tsType": {
+                "repr": "T",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "T"
+                }
+              }
+            }
+          ],
+          "typeParams": []
+        }
+      },
       "typeParams": [
         {
           "name": "T",
@@ -1978,72 +1820,230 @@
     }
   },
   {
-    "kind": "import",
-    "name": "Props",
-    "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/tpl_if.ts",
-      "line": 7,
-      "col": 0
-    },
-    "declarationKind": "private",
-    "jsDoc": {
-      "doc": "This file exports the tplIf function.\n",
-      "tags": [
-        {
-          "kind": "unsupported",
-          "value": "@copyright 2022 integereleven. All rights reserved. MIT license."
-        }
-      ]
-    },
-    "importDef": {
-      "src": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/types/mod.ts",
-      "imported": "Props"
-    }
-  },
-  {
-    "kind": "import",
-    "name": "TemplateCallback",
-    "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/tpl_if.ts",
-      "line": 7,
-      "col": 0
-    },
-    "declarationKind": "private",
-    "jsDoc": {
-      "doc": "This file exports the tplIf function.\n",
-      "tags": [
-        {
-          "kind": "unsupported",
-          "value": "@copyright 2022 integereleven. All rights reserved. MIT license."
-        }
-      ]
-    },
-    "importDef": {
-      "src": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/types/mod.ts",
-      "imported": "TemplateCallback"
-    }
-  },
-  {
-    "kind": "import",
+    "kind": "typeAlias",
     "name": "TemplateConditionCallback",
     "location": {
-      "filename": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/util/tpl_if.ts",
-      "line": 7,
+      "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/types/types.ts",
+      "line": 13,
       "col": 0
     },
-    "declarationKind": "private",
+    "declarationKind": "export",
     "jsDoc": {
-      "doc": "This file exports the tplIf function.\n",
-      "tags": [
+      "doc": "A callback returning a boolean value using the provided properties, `props`."
+    },
+    "typeAliasDef": {
+      "tsType": {
+        "repr": "",
+        "kind": "fnOrConstructor",
+        "fnOrConstructor": {
+          "constructor": false,
+          "tsType": {
+            "repr": "boolean",
+            "kind": "keyword",
+            "keyword": "boolean"
+          },
+          "params": [
+            {
+              "kind": "identifier",
+              "name": "props",
+              "optional": false,
+              "tsType": {
+                "repr": "T",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "T"
+                }
+              }
+            }
+          ],
+          "typeParams": []
+        }
+      },
+      "typeParams": [
         {
-          "kind": "unsupported",
-          "value": "@copyright 2022 integereleven. All rights reserved. MIT license."
+          "name": "T",
+          "constraint": {
+            "repr": "Props",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "Props"
+            }
+          }
         }
       ]
+    }
+  },
+  {
+    "kind": "function",
+    "name": "commitTask",
+    "location": {
+      "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/tasks/commit.task.ts",
+      "line": 109,
+      "col": 0
     },
-    "importDef": {
-      "src": "file:///home/ebntly/repos/sgmt/sgmt-repo-svc/src/types/mod.ts",
-      "imported": "TemplateConditionCallback"
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "This function helps generate a commit message, optionally prompting the user to commit."
+    },
+    "functionDef": {
+      "params": [
+        {
+          "kind": "assign",
+          "left": {
+            "kind": "identifier",
+            "name": "testing",
+            "optional": false,
+            "tsType": null
+          },
+          "right": "[UNSUPPORTED]",
+          "tsType": null
+        },
+        {
+          "kind": "assign",
+          "left": {
+            "kind": "identifier",
+            "name": "logLevel",
+            "optional": false,
+            "tsType": null
+          },
+          "right": "[UNSUPPORTED]",
+          "tsType": null
+        }
+      ],
+      "returnType": {
+        "repr": "Promise",
+        "kind": "typeRef",
+        "typeRef": {
+          "typeParams": [
+            {
+              "repr": "void",
+              "kind": "keyword",
+              "keyword": "void"
+            }
+          ],
+          "typeName": "Promise"
+        }
+      },
+      "hasBody": true,
+      "isAsync": true,
+      "isGenerator": false,
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "function",
+    "name": "initRepoTask",
+    "location": {
+      "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/tasks/init_repo.task.ts",
+      "line": 71,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "Initializes a repo with the sgmt repo scaffold."
+    },
+    "functionDef": {
+      "params": [
+        {
+          "kind": "assign",
+          "left": {
+            "kind": "identifier",
+            "name": "testing",
+            "optional": false,
+            "tsType": null
+          },
+          "right": "[UNSUPPORTED]",
+          "tsType": null
+        },
+        {
+          "kind": "assign",
+          "left": {
+            "kind": "identifier",
+            "name": "logLevel",
+            "optional": false,
+            "tsType": null
+          },
+          "right": "[UNSUPPORTED]",
+          "tsType": null
+        }
+      ],
+      "returnType": {
+        "repr": "Promise",
+        "kind": "typeRef",
+        "typeRef": {
+          "typeParams": [
+            {
+              "repr": "void",
+              "kind": "keyword",
+              "keyword": "void"
+            }
+          ],
+          "typeName": "Promise"
+        }
+      },
+      "hasBody": true,
+      "isAsync": true,
+      "isGenerator": false,
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "function",
+    "name": "bumpVersionTask",
+    "location": {
+      "filename": "file:///C:/repos/sgmt/sgmt-repo-svc/src/tasks/bump_version.task.ts",
+      "line": 41,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "This function bumps the version in the deno config file and version file."
+    },
+    "functionDef": {
+      "params": [
+        {
+          "kind": "assign",
+          "left": {
+            "kind": "identifier",
+            "name": "testing",
+            "optional": false,
+            "tsType": null
+          },
+          "right": "[UNSUPPORTED]",
+          "tsType": null
+        },
+        {
+          "kind": "assign",
+          "left": {
+            "kind": "identifier",
+            "name": "logLevel",
+            "optional": false,
+            "tsType": null
+          },
+          "right": "[UNSUPPORTED]",
+          "tsType": null
+        }
+      ],
+      "returnType": {
+        "repr": "Promise",
+        "kind": "typeRef",
+        "typeRef": {
+          "typeParams": [
+            {
+              "repr": "void",
+              "kind": "keyword",
+              "keyword": "void"
+            }
+          ],
+          "typeName": "Promise"
+        }
+      },
+      "hasBody": true,
+      "isAsync": true,
+      "isGenerator": false,
+      "typeParams": []
     }
   }
 ]

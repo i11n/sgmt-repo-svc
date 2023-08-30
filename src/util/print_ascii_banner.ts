@@ -17,6 +17,7 @@ const gradients = [
   0x795786,
   0x685995,
   0x585CA4,
+  0x585CA4,
 ];
 
 /** Returns the unformatted partic11e banner with a tool `name`. */
@@ -29,7 +30,8 @@ function createAsciiBanner(name: string): string {
 ▀███████████ ▀▀███ ████▄  ███   ███   ███     ███     
          ███   ███    ███ ███   ███   ███     ███     
    ▄█    ███   ███    ███ ███   ███   ███     ███     integereleven
- ▄████████▀    ████████▀   ▀█   ███   █▀     ▄████▀   sgmt ${name}`;
+ ▄████████▀    ████████▀   ▀█   ███   █▀     ▄████▀   sgmt ${name}
+`;
 }
 
 /** Prints a formatted partic11e banner with a tool `name`. */
